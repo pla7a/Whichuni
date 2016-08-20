@@ -1,0 +1,11 @@
+<title>Universities</title>
+
+{% if unis %}
+    <ul>
+    {% for university in unis %}
+        <li><a href="{% url 'review:review_uni' university.id %}">{{ university.uni_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No universities are available.</p>
+{% endif %}

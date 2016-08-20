@@ -1,0 +1,12 @@
+<title>Subjects</title>
+
+
+{% if subjects %}
+    <ul>
+    {% for sub in subjects %}
+      <li><a href="{% url 'review:review_subject' sub.id %}">{{ sub.subject_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No subjects are available.</p>
+{% endif %}
