@@ -1,0 +1,9 @@
+{% include 'review/navigationbar.html' with title="Error"  nbar="" %}
+
+{% include 'review/footer.html' %}
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'review/index.css' %}" />
+</head>
+
+<p class="mainbody">There was an error submitting your review. It is likely that you missed a field. <a href="/submit">Please try again.</p>

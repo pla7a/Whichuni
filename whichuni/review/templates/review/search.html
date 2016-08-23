@@ -1,13 +1,12 @@
 
-
 <head>
   {% include 'review/footer.html' %}
-  {% include 'review/navigationbar.html' with title="Submit"  nbar="submit" %}
+  {% include 'review/navigationbar.html' with title="Search"  nbar="search" %}
   {% load staticfiles %}
   <link rel="stylesheet" type="text/css" href="{% static 'review/index.css' %}" />
 
 <div class="mainbody">
-<form action="/submitted/" method="post">
+<form action="/us/" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit" />

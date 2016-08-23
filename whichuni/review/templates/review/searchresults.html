@@ -1,4 +1,4 @@
-{% include 'review/navigationbar.html' with title=university  nbar="" %}
+{% include 'review/navigationbar.html' with title="Search results"  nbar="" %}
 
 {% include 'review/footer.html' %}
 <!-- Table goes in the document BODY -->
@@ -10,33 +10,30 @@
 </head>
 
 {% if reviews %}
-  <h1 align="center">{{ university }}</h1>
-
+  <h1 align="center">{{ subject }} at {{ university }}</h1>
 
 <table class="gridtable" style="width:90%" align="center">
   <tr>
-    <th alight="left">Subject</th>
-    <th alight="left">Year started</th>
-    <th alight="left">Current year</th>
-    <th alight="left">Review</th>
-    <th alight="left">Rating</th>
+    <th align="left">University</th>
+    <th align="left">Subject</th>
+    <th align="left">Year started</th>
+    <th align="left">Review</th>
+    <th align="left">Rating</th>
   </tr>
 
 {% for r in reviews %}
   <tr>
+    <td align="left">{{ r.university }}</td>
     <td align="left">{{ r.subject }}</td>
     <td align="left">{{ r.year_started }}</td>
-    <td align="left">{{ r.current_year }}</td>
     <td align="left">{{ r.review }}</td>
     <td align="left">{{ r.rating }}</td>
   </tr>
 {% endfor %}
-
 </table>
 
-
-
 {% else %}
-  <p class="mainbody">There does not yet exist any reviews for this university. Why not add one now? <a href="/submit">Submit a review</a></p>
+  <p class="mainbody">There does not yet exist any reviews for this subject and university. Why not add one now? <a href="/submit">Submit a review</a></p>
+
 
 {% endif %}

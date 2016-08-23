@@ -18,9 +18,11 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="{% if nbar = "home" %}active{% endif %}"><a href="/">Home</a></li>
+      <li class="{% if nbar = "search" %}active{% endif %}"><a href="/search">Search</a></li>
       <li class="{% if nbar = "universities" %}active{% endif %}"><a href="/u">Universities</a></li>
       <li class="{% if nbar = "subjects" %}active{% endif %}"><a href="/s">Subjects</a></li>
-      <li class="{% if nbar = "submit" %}active{% endif %}"><a href="/">Submit</a></li>
+      <li class="{% if nbar = "submit" %}active{% endif %}"><a href="/submit">Submit</a></li>
+      <li class="{% if nbar = "contact" %}active{% endif %}"><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </nav>

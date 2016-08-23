@@ -1,0 +1,12 @@
+{% include 'review/navigationbar.html' with title=university  nbar="" %}
+
+{% include 'review/footer.html' %}
+<!-- Table goes in the document BODY -->
+
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'review/reviewtable.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'review/index.css' %}" />
+</head>
+
+<p class="mainbody">There does not yet exist any reviews for {{ subject }} at  {{ university }}. Why not add one now? <a href="/submit">Submit a review</a></p>
