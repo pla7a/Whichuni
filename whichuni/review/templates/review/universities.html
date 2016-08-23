@@ -1,4 +1,5 @@
-<title>Universities</title>
+{% include 'review/navigationbar.html' with title="Universities" nbar="universities" %}
+
 
 {% if unis %}
     <ul>
@@ -9,3 +10,5 @@
 {% else %}
     <p>No universities are available.</p>
 {% endif %}
+
+{% include 'review/footer.html' %}

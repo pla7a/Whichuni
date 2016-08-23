@@ -1,0 +1,32 @@
+{% include 'review/navigationbar.html' with title=""  nbar="home" %}
+
+{% include 'review/footer.html' %}
+<!-- Table goes in the document BODY -->
+
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'review/test.css' %}" />
+</head>
+
+
+
+<table class="gridtable" style="width:100%">
+  <tr>
+    <th>University</th>
+    <th>Year started</th>
+    <th>Current year</th>
+    <th>Review</th>
+    <th>Rating</th>
+  </tr>
+
+{% for r in reviews %}
+  <tr>
+    <td>{{ r.university }}</td>
+    <td>{{ r.year_started }}</td>
+    <td>{{ r.current_year }}</td>
+    <td>{{ r.review }}</td>
+    <td>{{ r.rating }}</td>
+  </tr>
+{% endfor %}
+
+</table>

@@ -1,5 +1,4 @@
-<title>Subjects</title>
-
+{% include 'review/navigationbar.html' with title="Subjects" nbar="subjects" %}
 
 {% if subjects %}
     <ul>
@@ -10,3 +9,5 @@
 {% else %}
     <p>No subjects are available.</p>
 {% endif %}
+
+{% include 'review/footer.html' %}

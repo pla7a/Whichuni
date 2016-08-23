@@ -1,6 +1,26 @@
-<title>whichuni</title>
+{% include 'review/navigationbar.html' with title="Home"  nbar="home" %}
 
-<center>
-  <a href="/u">Universities</a>
-  <a href="/s">Subjects</a>
-</center>
+{% include 'review/footer.html' %}
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'review/index.css' %}" />
+</head>
+
+<div class="mainbody">
+  <h1>whichUni</h1>
+  <br>
+  <p>We know choosing which university you want to go to, or whether you even want to go to university, is an extremely tricky choice and one that should not be taken lightly. </p>
+  <p>To help you with the decision making
+  process we have designed a site which allows you to read opinions and reviews from other students (who were likely in a similar position to yourselves) about their universities and their courses.
+  A lot of emphasis for choice of university should be put on the course itself and the content it covers, after all this is what you will spend the next three, four or five years of your life doing. Because of this we have
+  allowed you to search not only by university but also by course so you can see how the same courses at different universities compare.</p>
+  <p>Each review considers a few criteria. Obviously the university and subject compose them. Other criteria include the year the student started the course and the year they are currently in. This can help you gauge
+    an idea of how relevant the review may be given that university courses are changing regularly, especially those in STEM fields. Therefore it is recommended that you perhaps place more emphasis on the reviews where
+    the student began the course more recently, or at least a time where the course has not since changed.</p>
+  <p>We also ask the user to leave a written review regarding the choice and university. We ask for as much information as possible so as to give you a better idea of what to expect, such things may include: living quality, cost of living,
+    involvement of student union, nightlife and whatever else you can think of. However, we ask for greatest emphasis to be put on the quality and content of the course as we believe this to be the greatest factor in determining
+    whether a course and university is right for a student.</p>
+  <p>Finally we ask the student to leave a numerical rating out of 10 (10 being the best) on how much they would rate and recommend the chosen course and university. This can help you gauge what they think of it overall.</p>
+  <br>
+  <p>If you are already a student at a British university then please consider contributing to the site and submitting a review <a href="/submit">here</a> for other users to read.</p>
+</div>

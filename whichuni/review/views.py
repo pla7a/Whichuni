@@ -29,11 +29,27 @@ def uni(request):
 
 # Returns reviews for the university
 def review_uni(request,uni_id):
-    return render(request, 'review/index.html')
+    try:
+        uni = University.objects.get(pk=uni_id)
+        reviews = UniReview.objects.filter(university=uni)
+
+    except University.DoesNotExist:
+        raise Http404("University does not exist")
+
+    return render(request, 'review/review_uni.html', {'university': uni, 'reviews':reviews})
+
 
 # Returns reviews for the subject
 def review_subject(request,subject_id):
-    return render(request, 'review/index.html')
+    try:
+        subject_name = Subject.objects.get(pk=subject_id)
+        reviews = UniReview.objects.filter(subject=subject_name)
+
+    except Subject.DoesNotExist:
+        raise Http404("Subject does not exist")
+
+    return render(request, 'review/review_subject.html', {'subject': subject_name, 'reviews':reviews})
+
 
 def review_uni_subject(request, uni_id, subject_id):
     return render(request, 'review/index.html')

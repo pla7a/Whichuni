@@ -1,0 +1,39 @@
+{% include 'review/navigationbar.html' with title=uni  nbar="" %}
+
+{% include 'review/footer.html' %}
+<!-- Table goes in the document BODY -->
+
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'review/reviewtable.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'review/index.css' %}" />
+</head>
+
+{% if reviews %}
+<table class="gridtable" style="width:90%" align="center">
+  <tr>
+    <th alight="left">Subject</th>
+    <th alight="left">Year started</th>
+    <th alight="left">Current year</th>
+    <th alight="left">Review</th>
+    <th alight="left">Rating</th>
+  </tr>
+
+{% for r in reviews %}
+  <tr>
+    <td align="left">{{ r.subject }}</td>
+    <td align="left">{{ r.year_started }}</td>
+    <td align="left">{{ r.current_year }}</td>
+    <td align="left">{{ r.review }}</td>
+    <td align="left">{{ r.rating }}</td>
+  </tr>
+{% endfor %}
+
+</table>
+
+
+
+{% else %}
+  <p class="mainbody">There does not yet exist any reviews for this university. Why not add one now? <a href="/submit">Submit a review</a></p>
+
+{% endif %}
