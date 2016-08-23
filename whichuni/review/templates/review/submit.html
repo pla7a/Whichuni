@@ -1,10 +1,15 @@
-
-
 <head>
   {% include 'review/footer.html' %}
   {% include 'review/navigationbar.html' with title="Submit"  nbar="submit" %}
   {% load staticfiles %}
   <link rel="stylesheet" type="text/css" href="{% static 'review/index.css' %}" />
+
+<p class="mainbody">When submitting a review please take into consideration your whole university experience. such things may include: living quality, cost of living, involvement of student union, nightlife and whatever else
+  you can think of. Also please try and go into detail regarding the course content and the quality of the course and perhaps things that you would improve about the university and course or do differently regarding
+    university experience as a whole.
+</p>
+
+<br><br>
 
 <div class="mainbody">
 <form action="/submitted/" method="post">
